@@ -1,0 +1,160 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NIST SP 800-53 Rev. 5 Controls Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <nav class="top-nav">
+        <a class="brand" href="index.html">Compliance Atlas</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#frameworks">Frameworks</a>
+          <a href="nist-800-53.html" class="active">NIST SP 800-53</a>
+        </div>
+      </nav>
+
+      <header class="hero">
+        <div class="hero-text">
+          <div class="eyebrow">NIST SP 800-53 Rev. 5</div>
+          <h1>Controls and Enhancements Catalog</h1>
+          <p class="lede">
+            A subscription-ready workspace for catalog browsing, control status tracking,
+            and evidence collection across your organization.
+          </p>
+          <div class="meta" id="meta"></div>
+        </div>
+        <div class="hero-panel">
+          <div class="stat">
+            <div class="stat-value" id="stat-families">--</div>
+            <div class="stat-label">Families</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-controls">--</div>
+            <div class="stat-label">Controls</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-enhancements">--</div>
+            <div class="stat-label">Enhancements</div>
+          </div>
+        </div>
+      </header>
+
+      <section class="subscription">
+        <div class="subscription-card">
+          <div class="eyebrow">Subscription</div>
+          <h2>Audit workspace for teams</h2>
+          <p>
+            Track implementation status, collect evidence, and keep audit records aligned
+            to the official NIST catalog in one place.
+          </p>
+          <div class="pricing">
+            <div class="price-tier">
+              <div class="tier-name">Starter</div>
+              <div class="tier-price">$249/mo</div>
+              <div class="tier-detail">Up to 5 auditors</div>
+            </div>
+            <div class="price-tier featured">
+              <div class="tier-name">Professional</div>
+              <div class="tier-price">$749/mo</div>
+              <div class="tier-detail">Up to 25 auditors</div>
+            </div>
+            <div class="price-tier">
+              <div class="tier-name">Enterprise</div>
+              <div class="tier-price">Custom</div>
+              <div class="tier-detail">Unlimited auditors</div>
+            </div>
+          </div>
+          <div class="subscription-actions">
+            <button class="primary">Start 14-day trial</button>
+            <button class="ghost">Request demo</button>
+          </div>
+        </div>
+        <div class="workspace-card">
+          <div class="eyebrow">Company Workspace</div>
+          <div class="workspace-row">
+            <div>
+              <div class="workspace-label">Organization</div>
+              <div class="workspace-value">Sample Corp</div>
+            </div>
+            <div>
+              <div class="workspace-label">Plan</div>
+              <div class="workspace-value">Professional</div>
+            </div>
+            <div>
+              <div class="workspace-label">Billing</div>
+              <div class="workspace-value">Renews May 1</div>
+            </div>
+          </div>
+          <div class="workspace-row">
+            <button class="ghost">Manage users</button>
+            <button class="ghost">Billing settings</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <div class="search">
+          <label for="search-input">Search catalog</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search by family, control ID, or title"
+            autocomplete="off"
+          />
+        </div>
+        <div class="toggles">
+          <label class="toggle">
+            <input id="toggle-enhancements" type="checkbox" checked />
+            <span>Show enhancements</span>
+          </label>
+          <label class="toggle">
+            <input id="toggle-expand" type="checkbox" />
+            <span>Expand all controls</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="audit-toolbar">
+        <div class="audit-filter">
+          <label for="status-filter">Status filter</label>
+          <select id="status-filter">
+            <option value="all">All statuses</option>
+            <option value="implemented">Implemented</option>
+            <option value="in-progress">In progress</option>
+            <option value="not-implemented">Not implemented</option>
+          </select>
+        </div>
+        <div class="audit-actions">
+          <button id="export-audit" class="ghost">Export audit JSON</button>
+          <label class="ghost file-button">
+            Import audit JSON
+            <input id="import-audit" type="file" accept="application/json" />
+          </label>
+          <button id="clear-audit" class="ghost danger">Clear audit data</button>
+        </div>
+      </section>
+
+      <section class="nav" id="family-nav"></section>
+
+      <main id="families" class="families"></main>
+
+      <footer class="footer">
+        <div>Source: NIST SP 800-53 Rev. 5 OSCAL catalog.</div>
+        <button id="back-to-top" class="back-to-top" type="button">Back to top</button>
+      </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
