@@ -1,4 +1,4 @@
-# Compliance Mapping Web App 🔐
+# Compliance Mapping Web App
 
 ## Overview
 This web application helps map and explore multiple compliance frameworks:
@@ -18,12 +18,15 @@ This web application helps map and explore multiple compliance frameworks:
 - HTML, CSS, JavaScript
 
 ## Live Demo
-(Add your GitHub Pages link here)
+
 
 ## Screenshots
-(Add screenshots)
+
 
 ## Future Enhancements
 - AI-based control mapping
 - Search functionality
 - API integration
+- Upload all type of file as a evidence
+- API based evidence collection from the system 
+- Extract evidence from the documents 
